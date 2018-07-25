@@ -13,7 +13,7 @@
 			}
 			stage("build"){
 				steps{
-					sh 'mvn clean'
+					sh 'mvn package'
 				}			
 			}
                         stage("cc"){
