@@ -19,7 +19,7 @@
                         stage("cc"){
                               steps {  
   	                              sh "mvn jacoco:report"          
-	                              publishHTML (target: [ reportDir: 'build/reports/jacoco/test/html',
+	                              publishHTML (target: [ reportDir: 'build',
                		              reportFiles: 'index.html',               
 				      reportName: "JaCoCo Report"          ])          
 	                            }  
