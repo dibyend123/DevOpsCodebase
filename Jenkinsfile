@@ -1,5 +1,5 @@
 	pipeline{
-		agent {
+	agent {
 			docker {
 		   		 image 'maven:3-alpine' 
 		    		args '-v /root/.m2:/root/.m2' 
@@ -18,7 +18,7 @@
 			}
                         stage("cc"){
                               steps {  
-  	                              sh "mvn jacoco:report"          
+  	                              sh "mvn clean site"           
 	                              publishHTML (target: [ reportDir: 'build',
                		              reportFiles: 'index.html',               
 				      reportName: "JaCoCo Report"          ])          
