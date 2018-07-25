@@ -18,7 +18,7 @@
 			}
                         stage("cc"){
                               steps {  
-  	                              sh "mvn clean site"           
+  	                              sh "mvn jacoco:report"           
 	                              publishHTML (target: [ reportDir: 'build',
                		              reportFiles: 'index.html',               
 				      reportName: "JaCoCo Report"          ])          
