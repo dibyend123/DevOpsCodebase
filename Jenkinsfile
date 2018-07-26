@@ -16,7 +16,12 @@
 					sh 'mvn package'
 				}			
 			}
-                        stage("cc"){
+			stage("codecheck"){
+				steps{
+				   sh "mvn jacoco:check"
+				}
+			}
+                        stage("codecheckreport"){
                               steps {  
   	                              sh "mvn jacoco:report"           
 	                              publishHTML (target: [ reportDir: 'target/jacoco-ut',
