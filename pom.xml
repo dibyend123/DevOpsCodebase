@@ -144,7 +144,6 @@
 							<outputDirectory>target/jacoco-ut</outputDirectory>
 						</configuration>
 					</execution>
-				</executions>
 <execution>
     <id>jacoco-check</id>
     <goals>
@@ -164,7 +163,8 @@
             </rule>
         </rules>
     </configuration>
-</execution>			
+</execution>
+				</executions>
 	<configuration>
 					<systemPropertyVariables>
 						<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
