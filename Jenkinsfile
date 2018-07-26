@@ -18,7 +18,7 @@
 			}
 			stage("codecheck"){
 				steps{
-				   sh "mvn jacoco-check:check"
+				   sh "mvn clean verify"
 				}
 			}
                         stage("codecheckreport"){
