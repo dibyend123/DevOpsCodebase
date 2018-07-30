@@ -12,7 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
+/** 
+documentation 
+*/ 
 @RestController
 @RequestMapping("/DevOpsCal")
 public class DevOpsCal{
