@@ -29,5 +29,10 @@
 				      reportName: "JaCoCo Report"          ])          
 	                            }  
                         }
+                        stage("checkstyle"){
+				steps{
+					sh "mvn clean site"
+				}
+			}
 		}
 	}
