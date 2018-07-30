@@ -19,7 +19,10 @@
 			stage("codecheck"){
 				steps{
 				   sh "mvn clean verify"
-				}
+		                      publishHTML (target: [ reportDir: 'target/site',
+                                      reportFiles: 'checkstyle.html',
+                                      reportName: "checkstyle Report" ])	
+                        	}
 			}
                         stage("codecheckreport"){
                               steps {  
