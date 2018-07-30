@@ -31,7 +31,7 @@
                         }
                         stage("checkstyle"){
 				steps{
-					sh "mvn clean site"
+					sh "mvn checkstyle:checkstyle"
 				}
 			}
 		}
