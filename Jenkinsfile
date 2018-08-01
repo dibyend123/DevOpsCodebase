@@ -37,5 +37,10 @@
 					sh "mvn checkstyle:checkstyle"
 				}
 			}
+			stage("createpackage"){
+				steps{
+					sh "mvn package"
+				}
+			}
 		}
 	}
