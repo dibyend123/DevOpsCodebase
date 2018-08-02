@@ -1,3 +1,3 @@
 FROM frolvlad/alpine-oraclejdk8:slim
-COPY /home/ubuntu/dibyendu/jenkins/workspace/CIPipeline/target/devopscal-1.0.jar app.jar
+COPY devopscal-1.0.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
