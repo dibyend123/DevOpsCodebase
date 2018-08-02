@@ -42,5 +42,10 @@
 					sh "mvn package"
 				}
 			}
+			stage("dockerbuild"){
+				steps{
+					sh "docker build -t calculator ."
+				}
+			}
 		}
 	}
