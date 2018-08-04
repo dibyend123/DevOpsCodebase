@@ -44,6 +44,7 @@
 			}
 			stage("dockerbuild"){
 				steps{
+					sh "which docker"
 					sh "docker build -t calculator ."
 				}
 			}
