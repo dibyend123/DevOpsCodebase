@@ -44,8 +44,8 @@
 			}
 			stage("dockerbuild"){
 				steps{
-
-					sh "docker build -t calculator ."
+                                        sh "who am i"
+					sh "docker run hello-world" 
 				}
 			}
 		}
