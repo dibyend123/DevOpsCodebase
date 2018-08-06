@@ -45,8 +45,9 @@
 			stage("dockerbuild"){
 				steps{
                                         sh "id"
-					sh "which docker"
-					sh "docker run hello-world" 
+					sh "java -version"
+                                        sh "which java"				
+                                	sh "docker run hello-world" 
 				}
 			}
 		}
