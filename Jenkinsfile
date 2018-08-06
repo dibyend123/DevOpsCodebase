@@ -45,7 +45,7 @@
 			stage("dockerbuild"){
 				steps{
                                         sh "id"
-					sh "whoami"
+					sh "which docker"
 					sh "docker run hello-world" 
 				}
 			}
