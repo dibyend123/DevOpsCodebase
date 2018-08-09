@@ -47,12 +47,9 @@
                                         sh "id"
 					sh "java -version"
                                         sh "which java"	
-					try{
+				
 								
                                 	sh "docker run hello-world"
-					}catch(Exception e){
-						println(e);
-					}	 
 				}
 			}
 		}
