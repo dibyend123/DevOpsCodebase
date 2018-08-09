@@ -49,7 +49,7 @@
                                         sh "which java"	
 				
 								
-                                	sh "docker run hello-world"
+                                	sh "/usr/bin/docker run hello-world"
 				}
 			}
 		}
