@@ -46,7 +46,8 @@
 				steps{
                                         sh "id"
 					sh "java -version"
-                                        sh "which java"	
+                                        sh "which java"
+                                        sh "which docker"	
 				
 								
                                 	sh "/usr/bin/docker run hello-world"
