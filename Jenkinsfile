@@ -46,7 +46,11 @@
 				}
 			}
 			stage("dockerbuild"){
-				}
+			  steps{
+                            script {
+                              docker.build registry+":1"
+                            }
+                         }	
 			}
 		}
 	}
