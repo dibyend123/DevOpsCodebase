@@ -48,7 +48,8 @@
 			stage("dockerbuild"){
 			  steps{
                             script {
-                              docker.build registry+":1"
+                              docker.build registry+":2"
+
                             }
                          }	
 			}
