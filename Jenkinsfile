@@ -22,17 +22,17 @@
 			stage("codecheck"){
 				steps{
 				   sh "mvn clean verify"
-		                      publishHTML (target: [ reportDir: 'target/site',
-                                      reportFiles: 'checkstyle.html',
-                                      reportName: "checkstyle Report" ])	
+		                   //   publishHTML (target: [ reportDir: 'target/site',
+                                     // reportFiles: 'checkstyle.html',
+                                      //reportName: "checkstyle Report" ])	
                         	}
 			}
                         stage("codecheckreport"){
                               steps {  
   	                              sh "mvn jacoco:report"           
-	                              publishHTML (target: [ reportDir: 'target/jacoco-ut',
-               		              reportFiles: 'index.html',               
-				      reportName: "JaCoCo Report"          ])          
+	                            //  publishHTML (target: [ reportDir: 'target/jacoco-ut',
+               		              //reportFiles: 'index.html',               
+				      //reportName: "JaCoCo Report"          ])          
 	                            }  
                         }
                         stage("checkstyle"){
