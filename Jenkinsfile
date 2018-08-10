@@ -1,4 +1,7 @@
 	pipeline{
+        environment{
+             registry = "localhost:5000"
+        }
 	agent {
 			docker {
 		   		 image 'maven:3-alpine' 
@@ -43,14 +46,6 @@
 				}
 			}
 			stage("dockerbuild"){
-				steps{
-                                        sh "id"
-					sh "java -version"
-                                        sh "which java"
-                                        sh "which docker"	
-				
-								
-                                	sh "/usr/bin/docker run hello-world"
 				}
 			}
 		}
