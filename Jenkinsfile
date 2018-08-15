@@ -45,7 +45,8 @@ pipeline{
 			}
 			stage("dockerbuild"){
 				steps{
-                                       sh "bash ./dockercommand.sh"
+                                sh "export PATH=$PATH:/usr/bin/docker"       
+				sh "bash ./dockercommand.sh"
 				}
 			}
 		}
