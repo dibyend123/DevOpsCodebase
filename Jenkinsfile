@@ -5,9 +5,9 @@ pipeline{
 		    		args '-v /root/.m2:/root/.m2' 
 			}
 		}
-			environment{
+		/*	environment{
 				PATH="/usr/bin:$PATH"
-			}
+			}*/
 		stages{
 			
 			stage("test"){
@@ -48,7 +48,7 @@ pipeline{
 			}
 			stage("dockerbuild"){
 				steps{
-                                sh "export PATH=$PATH:/usr/bin/docker"       
+                           //     sh "export PATH=$PATH:/usr/bin/docker"       
 				sh "bash ./dockercommand.sh"
 				}
 			}
