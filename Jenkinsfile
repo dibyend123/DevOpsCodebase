@@ -40,7 +40,7 @@ pipeline{
 			}
 			stage("dockerbuild"){
 				steps{
-		docker build -t "calculator/latest" .		
+		 sh "docker build -t calculator/latest ."		
                            }
 			}
 		}
