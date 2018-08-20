@@ -40,7 +40,7 @@ pipeline{
 			}
 			stage("dockerbuild"){
 				steps{
-		 sh "docker build -t calculator:${BUILD_NUMBER} ."		
+		 sh "docker build -t localhost:5000/calculator:${BUILD_NUMBER} ."		
                            }
 			}
 			stage("dockerpush"){
