@@ -40,8 +40,13 @@ pipeline{
 			}
 			stage("dockerbuild"){
 				steps{
-		 sh "docker build -t calculator/latest ."		
+		 sh "docker build -t calculator ."		
                            }
+			}
+			stage("dockerpush"){
+				steps{
+					sh "docker push localhost:7000/calculator:${BUILD_NUMBER}"
+				}
 			}
 		}
 }
