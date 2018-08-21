@@ -53,5 +53,11 @@ pipeline{
 					sh "docker run -d --rm -p 8765:8080 --name calculator localhost:5000/calculator:${BUILD_NUMBER}"
 				}
 			}
+			stage("acceptancetest"){
+				steps{
+					sleep 60
+					sh "./acceptance_test.sh"
+				}	
+			}	
 		}
 }
