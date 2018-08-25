@@ -59,10 +59,10 @@ pipeline{
 					sh "bash acceptance_test.sh"
 				}	
 			}
-			post{
+		}
+		post{
 				always{
 					sh "docker stop calulator"
 				}
-			}	
-		}
+		} 
 }
