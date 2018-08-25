@@ -62,7 +62,7 @@ pipeline{
 		}
 		post{
 				always{
-					sh "docker stop calulator"
+					sh "docker stop calculator"
 				}
 		} 
 }
