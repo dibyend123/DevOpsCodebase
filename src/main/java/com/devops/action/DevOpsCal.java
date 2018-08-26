@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.cache.annotation.Cacheable;
 
 /** 
 documentation 
@@ -27,6 +28,7 @@ public class DevOpsCal{
 
 
 	@RequestMapping(value="/add", method=RequestMethod.GET)
+	@Cacheable("sum")
 	public ResponseEntity<String> addition(@RequestParam(value = "a", required = false) String a,@RequestParam(value = "b", required = false) String b)  {	
 
 		return new ResponseEntity<String>((Integer.parseInt(a)+Integer.parseInt(b))+"", HttpStatus.OK);		
