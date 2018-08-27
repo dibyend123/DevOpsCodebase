@@ -48,7 +48,12 @@ pipeline{
 					sh "docker-compose ps"
 				}
 			}
-
+			stage("acceptancetest"){
+				steps{
+					sleep 60
+					sh "bash acceptance_test.sh"
+				}	
+			}
 /*			stage("dockerbuild"){
 				steps{
 		 sh "docker build -t localhost:5000/calculator:${BUILD_NUMBER} ."		
@@ -77,9 +82,10 @@ pipeline{
 				}	
 			}*/
 		}
-/*		post{
+		post{
 				always{
-					sh "docker stop calculator"
+					sh "docker-compose down"
+
 				}
-		}*/ 
+		} 
 }
