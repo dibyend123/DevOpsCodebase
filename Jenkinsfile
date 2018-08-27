@@ -43,6 +43,11 @@ pipeline{
 					sh "docker-compose up -d"
 				}
 			}
+			stage("dockercomposetest"){
+				steps{
+					sh "docker-compose ps"
+				}
+			}
 
 /*			stage("dockerbuild"){
 				steps{
@@ -72,9 +77,9 @@ pipeline{
 				}	
 			}*/
 		}
-		post{
+/*		post{
 				always{
 					sh "docker stop calculator"
 				}
-		} 
+		}*/ 
 }
