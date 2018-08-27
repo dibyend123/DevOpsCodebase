@@ -1,2 +1,3 @@
 #!/bin/bash
-test $(curl http://ec2-52-66-166-134.ap-south-1.compute.amazonaws.com:8765/DevOpsCal/add?a=10\&b=20) -eq 30
+CALCULATOR_PORT=$(docker-compose port calculator 8080 | cut -d: -f2)
+test $(curl localhost:$CALCULATOR_PORT/sum?a=1\&b=2) -eq 3
