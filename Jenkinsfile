@@ -38,7 +38,13 @@ pipeline{
 					sh "mvn package"
 				}
 			}
-			stage("dockerbuild"){
+    			stage("dockercomposebuild"){
+				steps{
+					sh "docker-compose up -d"
+				}
+			}
+
+/*			stage("dockerbuild"){
 				steps{
 		 sh "docker build -t localhost:5000/calculator:${BUILD_NUMBER} ."		
                            }
@@ -58,7 +64,7 @@ pipeline{
 					sh "docker-compose --version"
 				}
 
-			}
+			}*/
 /*			stage("acceptancetest"){
 				steps{
 					sleep 60
