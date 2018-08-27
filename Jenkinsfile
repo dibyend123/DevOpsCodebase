@@ -59,12 +59,12 @@ pipeline{
 				}
 
 			}
-			stage("acceptancetest"){
+/*			stage("acceptancetest"){
 				steps{
 					sleep 60
 					sh "bash acceptance_test.sh"
 				}	
-			}
+			}*/
 		}
 		post{
 				always{
