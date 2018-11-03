@@ -38,7 +38,7 @@ pipeline{
 					sh "mvn package"
 				}
 			}
-    			stage("dockercomposebuild"){
+    /*			stage("dockercomposebuild"){
 				steps{
 					sh "docker-compose up -d"
 				}
@@ -53,8 +53,8 @@ pipeline{
 					sleep 60
 					sh "bash acceptance_test.sh"
 				}	
-			}
-/*			stage("dockerbuild"){
+			}*/
+			stage("dockerbuild"){
 				steps{
 		 sh "docker build -t localhost:5000/calculator:${BUILD_NUMBER} ."		
                            }
@@ -64,7 +64,7 @@ pipeline{
 					sh "docker push localhost:5000/calculator:${BUILD_NUMBER}"
 				}
 			}
-			stage("Deploy"){
+/*			stage("Deploy"){
 				steps{
 					sh "docker run -d --rm -p 8765:8080 --name calculator localhost:5000/calculator:${BUILD_NUMBER}"
 				}
